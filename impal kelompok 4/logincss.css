@@ -1,0 +1,67 @@
+body{
+	background-image: url("arsitektur.jpg");
+}
+#top{
+	margin: 80px 0px;
+	background-color:#1f2d2d;
+	width: 400px;
+	height: 600px;
+	padding-top: 20px;
+	border-radius: 20px;
+	box-shadow: 10px 10px grey;
+}
+#salam {
+	color: white;
+	font-family: 'Indie Flower', cursive;
+	font-size: 25px;
+	margin-top: 20px;
+}
+#checker {
+	color: white;
+	font-family: 'Indie Flower', cursive;
+	font-size: 16px;
+	margin-top: 20px;
+}
+#trex {
+	width: 175px;
+	margin-bottom: 20px;
+	margin-top: 20px; 
+}
+.inpt {
+	border: none;
+	border-bottom: 2px solid firebrick;
+	height: 40px;
+	width: 300px;
+	background-color: #1f2d2d;
+	margin-top: 20px;
+	font-family: 'Indie Flower', cursive;	
+}
+#submitbtn {
+	width: 300px;
+	margin-top: 20px;
+	border-radius: 10px;
+	border : none;
+	background-color: white;
+	color: maroon;
+	font-family: 'Indie Flower', cursive;	
+}
+#remember {
+	margin-top: 20px;	
+}
+#rmb {
+	font-family: 'Indie Flower', cursive;	
+	color: white;
+}
+#forgot:link {
+	text-decoration: none;
+	color: white;
+	font-family: 'Indie Flower', cursive;	
+}
+#forgot:visited {
+	text-decoration: none;
+	color: white;
+	font-family: 'Indie Flower', cursive;	
+}
+#forgot:hover {
+	color: coral;
+}
