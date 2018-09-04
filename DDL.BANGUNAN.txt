@@ -1,0 +1,98 @@
+
+CREATE TABLE PELANGGAN
+( 
+	noKTP_P varchar2(50) not null,
+	nama_P varchar2(100),
+	noHP_P number,
+	alamat_P varchar2(100),
+	CONSTRAINT PK_PELANGGAN PRIMARY KEY (noKTP_P) ENABLE,
+);
+
+CREATE TABLE MEMESAN
+( 
+	id_P varchar2(50) not null enable,
+	id_B varchar2(50) not null enable,
+	noKTP_P varchar2(50) not null enable,
+	CONSTRAINT PK_MEMESAN PRIMARY KEY (id_P) ENABLE,
+	CONSTRAINT MEMESAN_FK1 FOREIGN KEY (id_B)
+      REFERENCES  BANGUNAN (id_B) ON DELETE CASCADE ENABLE,
+	CONSTRAINT MEMESAN_FK2 FOREIGN KEY (noKTP_P)
+      REFERENCES  PELANGGAN (noKTP_P) ON DELETE CASCADE ENABLE
+);
+
+
+CREATE TABLE BANGUNAN
+( 
+	id_B varchar2(50) not null,
+	noKTP_M varchar2(50) not null,
+	CONSTRAINT PK_BANGUNAN PRIMARY KEY (id_B) ENABLE,
+	CONSTRAINT BANGUNAN_FK1 FOREIGN KEY (noKTP_M)
+      REFERENCES  MANDOR (noKTP_M) ON DELETE CASCADE ENABLE
+);
+
+
+CREATE TABLE TRANSAKSI
+( 
+	id_Transaksi varchar2(50) not null,
+	id_P varchar2(50) not null,
+	noKTP_Ad varchar2(50) not null,
+	harga number,
+	CONSTRAINT PK_TRANSAKSI PRIMARY KEY (id_Transaksi) ENABLE,
+	CONSTRAINT TRANSAKSI_FK1 FOREIGN KEY (id_P)
+      REFERENCES  MEMESAN (id_P) ON DELETE CASCADE ENABLE,
+	CONSTRAINT TRANSAKSI_FK2 FOREIGN KEY (noKTP_Ad)
+      REFERENCES  ADMIN (noKTP_Ad) ON DELETE CASCADE ENABLE
+	
+);
+
+
+CREATE TABLE ARSITEK
+( 
+	noKTP_Ar varchar2(50) not null,
+	noKTP_Ad varchar2(50) not null,
+	nama_Ar varchar2(100),
+	noHP_Ar number,
+	CONSTRAINT PK_ARSITEK PRIMARY KEY (noKTP_Ar) ENABLE,	
+	CONSTRAINT ARSITEK_FK1 FOREIGN KEY (noKTP_Ad)
+      REFERENCES  ADMIN (noKTP_Ad) ON DELETE CASCADE ENABLE
+	
+);
+
+
+CREATE TABLE ADMIN
+( 
+	noKTP_Ad varchar2(50) not null,
+	nama_Ad varchar2(100),
+	noHP_Ad number,
+	CONSTRAINT PK_ADMIN PRIMARY KEY (noKTP_Ad) ENABLE	
+	
+);
+
+
+CREATE TABLE MANDOR
+( 
+	noKTP_M varchar2(50) not null,
+	nama_M varchar2(100),
+	noHP_M number,
+	CONSTRAINT PK_MANDOR PRIMARY KEY (noKTP_M) ENABLE	
+);
+
+
+CREATE TABLE PAKAI
+( 
+	noKTP_M varchar2(50) not null,
+	id_Bn varchar2(50) not null,
+	CONSTRAINT PAKAI_FK1 FOREIGN KEY (noKTP_M)
+      REFERENCES  MANDOR (noKTP_M) ON DELETE CASCADE ENABLE,
+	CONSTRAINT PAKAI_FK2 FOREIGN KEY (id_Bn)
+      REFERENCES  BANGUNAN (id_Bn) ON DELETE CASCADE ENABLE
+	
+);
+
+CREATE TABLE BAHAN
+( 
+	id_Bn varchar2(50) not null,
+	nama_Bn varchar2(100),
+	stok number,
+	CONSTRAINT PK_BAHAN PRIMARY KEY (id_Bn) ENABLE
+);
