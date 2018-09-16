@@ -1,0 +1,85 @@
+
+body {
+	background-image: url('3.jpg');
+	background-size: 100%;
+
+}
+
+#salam {
+	color: #FA8072;
+	font-family: 'Indie Flower', cursive;
+	font-size: 25px;
+	margin-top: 20px;
+}
+
+#top{
+
+	background-color:white;
+	width: 800px;
+	height: 600px;
+	border-radius: 20px;
+	box-shadow: 10px 10px grey;
+}
+
+#logo{
+		width: 50px;
+		
+
+}
+
+}
+.navbar-expand-md {
+	background-color: #000;
+	font-family: 'Karla', sans-serif;
+	font-size: 14px;
+	padding-left:400px;
+}
+.navbar-brand {
+	color: white;
+	font-size: 14px;
+}
+.navbar-default .navbar-toggle-icon {
+  background-color: #fff; /* Changes regular toggle color */
+}
+span{
+	color: white;
+}
+.font{
+	color: #ff005c;
+	font-family: 'Karla', sans-serif;
+	text-align: center;
+	padding-left: 20%;
+}
+.you{
+	text-align: center;
+	font-style: bold;
+
+}
+.gambar{
+	width: 100%;
+}
+.form-control{
+	border-radius: 10px; 
+	background-color: #000;
+}
+.nav-link {
+	color: white;
+	font-size: 14px;
+	margin-left: 15px;
+}
+.menuin {
+	color: white;
+}
+.dropdown-menu {
+	background-color: #000;
+	font-size: 14px;
+}
+#judul {
+	font-family: 'Pompiere', cursive;
+	font-size: 50px;
+	margin-top: 50px;
+}
+.dropdown-item {
+	color: white;
+	font-size: 14px;
+}
